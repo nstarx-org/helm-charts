@@ -3,3 +3,8 @@ charts/*/templates/
 
 # Chart releaser temporary files
 .cr-*
+
+# Additional IDE specific
+.idea/
+.idea
+.DS_Store
