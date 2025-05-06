@@ -6,6 +6,12 @@ on:
       - main
   workflow_dispatch:
 
+# Add this permissions block
+permissions:
+  contents: write    # Needed for pushing to gh-pages and creating releases
+  pages: write       # Needed for GitHub Pages
+  id-token: write    # Needed for requesting the JWT
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -19,7 +25,7 @@ jobs:
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
+      
       - name: Install Helm
         uses: Azure/setup-helm@v3
         with:
