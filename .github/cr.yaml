@@ -1,0 +1,3 @@
+# .github/cr.yaml
+index-path: index.yaml
+charts-repo: https://github.com/nstarx-org/helm-charts

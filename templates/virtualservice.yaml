@@ -1,0 +1,30 @@
+{{- if .Values.istio.enabled -}}
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ include "app.fullname" . }}-virtualservice
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "app.labels" . | nindent 4 }}
+spec:
+  gateways:
+  - {{ .Values.istio.gateway.name }}
+  hosts:
+  - {{ .Values.istio.hosts | default "*" | quote }}
+  http:
+  - match:
+    - uri:
+        prefix: {{ .Values.istio.uriPrefix | quote }}
+    {{- if .Values.istio.rewrite.enabled }}
+    rewrite:
+        uri: {{ .Values.istio.rewrite.uri | quote }}
+    {{- end }}
+    route:
+    - destination:
+        port:
+          number: {{ .Values.service.port }}
+        host: {{ include "app.serviceName" . }}
+    {{- if .Values.istio.timeout }}
+    timeout: {{ .Values.istio.timeout }}
+    {{- end }}
+{{- end }}

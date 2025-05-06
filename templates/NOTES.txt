@@ -1,0 +1,112 @@
+#######################################################################
+# {{ .Chart.Name | upper }} DEPLOYMENT NOTES
+#######################################################################
+
+Thank you for installing {{ .Chart.Name }}!
+
+Release Name: {{ .Release.Name }}
+Namespace: {{ .Release.Namespace }}
+Chart Version: {{ .Chart.Version }}
+App Version: {{ .Chart.AppVersion }}
+
+#######################################################################
+# ACCESS INFORMATION
+#######################################################################
+
+{{- if .Values.ingress.enabled }}
+Your application is available at:
+{{ include "app.ingressUrl" . }}
+
+{{- if .Values.ingress.tls }}
+TLS is enabled for this ingress.
+{{- else }}
+NOTE: TLS is not enabled. To enable TLS, set ingress.tls in your values file.
+{{- end }}
+
+{{- else if contains "NodePort" .Values.service.type }}
+Your application can be accessed via NodePort:
+
+  export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace }} -o jsonpath="{.spec.ports[0].nodePort}" services {{ include "app.fullname" . }})
+  export NODE_IP=$(kubectl get nodes --namespace {{ .Release.Namespace }} -o jsonpath="{.items[0].status.addresses[0].address}")
+  echo "Application URL: http://$NODE_IP:$NODE_PORT"
+
+{{- else if contains "LoadBalancer" .Values.service.type }}
+Your application is exposed via LoadBalancer:
+
+  NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+        You can watch the status by running:
+        kubectl get --namespace {{ .Release.Namespace }} svc -w {{ include "app.fullname" . }}
+
+  export SERVICE_IP=$(kubectl get svc --namespace {{ .Release.Namespace }} {{ include "app.fullname" . }} --template "{{"{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}"}}")
+  echo "Application URL: http://$SERVICE_IP:{{ .Values.service.port }}"
+
+{{- else if contains "ClusterIP" .Values.service.type }}
+Your application is available within the cluster at:
+  
+  Service URL: {{ include "app.serviceFqdn" . }}:{{ .Values.service.port }}
+
+To access the application on your local machine:
+
+  export POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app.kubernetes.io/name={{ include "app.name" . }},app.kubernetes.io/instance={{ .Release.Name }}" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT={{ template "app.containerPort" . }}
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace {{ .Release.Namespace }} port-forward $POD_NAME 8080:$CONTAINER_PORT
+
+{{- end }}
+
+#######################################################################
+# MANAGEMENT COMMANDS
+#######################################################################
+
+# List all resources in this release
+kubectl get all -n {{ .Release.Namespace }} -l app.kubernetes.io/instance={{ .Release.Name }}
+
+# View application logs
+kubectl logs -n {{ .Release.Namespace }} -l app.kubernetes.io/instance={{ .Release.Name }} -f
+
+# Access application shell
+kubectl exec -it -n {{ .Release.Namespace }} $(kubectl get pods -n {{ .Release.Namespace }} -l app.kubernetes.io/instance={{ .Release.Name }} -o jsonpath='{.items[0].metadata.name}') -- /bin/sh
+
+{{- if .Values.persistence.enabled }}
+# Persistent storage information
+PVC: {{ include "app.pvcName" . }}
+Mount path: {{ .Values.persistence.mountPath }}
+Storage size: {{ .Values.persistence.size }}
+{{- end }}
+
+{{- if .Values.probes.enabled }}
+# Health Endpoints
+Health check: /health
+Readiness check: /ready
+{{- end }}
+
+{{- if .Values.env }}
+# Environment Configuration
+The application is configured with {{ len .Values.env }} environment variables.
+{{- end }}
+
+{{- if .Values.secrets }}
+# Secrets Configuration
+The application is configured with {{ len .Values.secrets }} secrets.
+{{- end }}
+
+{{- if .Values.autoscaling.enabled }}
+# Autoscaling Configuration
+Min replicas: {{ .Values.autoscaling.minReplicas }}
+Max replicas: {{ .Values.autoscaling.maxReplicas }}
+Target CPU utilization: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}%
+{{- end }}
+
+{{- if .Values.istio.enabled }}
+# Istio Configuration
+Virtual Service: {{ include "app.fullname" . }}-virtualservice
+URI Prefix: {{ .Values.istio.uriPrefix }}
+Gateway: {{ .Values.istio.gateway.name }}
+{{- end }}
+
+For more information about this deployment, refer to the values.yaml documentation
+or run:
+
+  helm get values {{ .Release.Name }} -n {{ .Release.Namespace }}
+
+#######################################################################
