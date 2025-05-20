@@ -53,4 +53,18 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-frontend-0.1.0/genai-frontend-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-06T10:30:58.114312896Z"
+  genai-hub-blueprint-ai:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-05-20T11:17:05.276336728Z"
+    description: A Helm chart for deploying blueprint ai usecase for the genai-hub
+    digest: b4ad54e747fe645994c04a32435643554bbdd23d50cebc3458b867fca709398a
+    home: https://github.com/nstarx-org/ML-Service-BlueprintAI
+    keywords:
+    - blueprint-ai
+    name: genai-hub-blueprint-ai
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-blueprint-ai-0.1.0/genai-hub-blueprint-ai-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-05-20T11:17:05.276347648Z"
