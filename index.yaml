@@ -40,6 +40,57 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/euc-middleware-0.1.0/euc-middleware-0.1.0.tgz
     version: 0.1.0
+  ftaas-frontend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-09-01T09:28:51.229054068Z"
+    description: A Helm chart for deploying finetuning-frontend component to Kubernetes
+    digest: 13ea8ee8fe21fe0a8d92aecc1fb0423e51bb0f2a42acef7ee2e74d8af71d7a4e
+    home: https://github.com/nstarx-org/FineTuning-as-a-service
+    keywords:
+    - ftaas-frontend
+    maintainers:
+    - email: saishiva.gudla@nstarxinc.com
+      name: SaiShiva G
+    name: ftaas-frontend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/ftaas-frontend-0.1.0/ftaas-frontend-0.1.0.tgz
+    version: 0.1.0
+  ftaas-middleware:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-09-01T09:28:51.49375714Z"
+    description: A Helm chart for deploying finetuning-middleware component to Kubernetes
+    digest: 4915023c0fa14ef756a6bc6f3c3290053fce11d335052a4197435a3dda40aaa5
+    home: https://github.com/nstarx-org/FineTuning-as-a-service
+    keywords:
+    - ftaas-middleware
+    maintainers:
+    - email: saishiva.gudla@nstarxinc.com
+      name: SaiShiva G
+    name: ftaas-middleware
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/ftaas-middleware-0.1.0/ftaas-middleware-0.1.0.tgz
+    version: 0.1.0
+  ftaas-ml-backend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-09-01T09:28:52.132921806Z"
+    description: A Helm chart for deploying finetuning-ml-backend component to Kubernetes
+    digest: 2d975facb8a0ba2516c297797025ccbaed38fa8da8992751678fa4317dc54895
+    home: https://github.com/nstarx-org/FineTuning-as-a-service
+    keywords:
+    - ftaas-ml-backend
+    maintainers:
+    - email: saishiva.gudla@nstarxinc.com
+      name: SaiShiva G
+    name: ftaas-ml-backend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/ftaas-ml-backend-0.1.0/ftaas-ml-backend-0.1.0.tgz
+    version: 0.1.0
   genai-frontend:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -177,4 +228,4 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-tts-0.1.0/genai-hub-tts-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-22T09:04:46.491677792Z"
+generated: "2025-09-01T09:28:52.13293473Z"
