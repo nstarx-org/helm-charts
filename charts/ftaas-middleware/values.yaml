@@ -1,0 +1,201 @@
+# Default values for your application
+# This is a YAML-formatted file.
+
+# Number of pod replicas to run
+replicaCount: 1
+
+# Container image configuration
+image:
+  # Docker image repository
+  repository: ftaas/ftaas-backend
+  # Image pull policy: IfNotPresent, Always, or Never
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion
+  tag: "nvidia-nstarx-latest"
+
+# Image pull secrets for private registries
+imagePullSecrets: []
+# - name: regcred
+
+# Override chart name
+nameOverride: ""
+# Override the full name
+fullnameOverride: ""
+
+# Service account configuration
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+# Pod annotations
+podAnnotations: {}
+
+# Pod security context
+podSecurityContext: {}
+  # fsGroup: 2000
+
+# Container security context
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+# Service configuration
+service:
+  # Service type: ClusterIP, NodePort, LoadBalancer
+  type: ClusterIP
+  # Service port
+  port: 80
+  # Target port in the container
+  targetPort: 80
+  # Node port (when service.type is NodePort)
+  # nodePort: 30000
+  # Service annotations
+  annotations: {}
+
+# Ingress configuration
+ingress:
+  # Enable ingress
+  enabled: false
+  # Ingress class name
+  className: ""
+  # Ingress annotations
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  # Ingress hosts configuration
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: Prefix
+  # TLS configuration
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+# Persistence configuration
+persistence:
+  # Enable persistent storage
+  enabled: false
+  # Name for the persistent volume
+  name: data
+  # Storage class name
+  storageClass: ""
+  # Access mode
+  accessMode: ReadWriteOnce
+  # Volume mode
+  volumeMode: Filesystem
+  # Storage size
+  size: 10Gi
+  # Mount path in container
+  mountPath: /data
+  # Volume name (if using existing PV)
+  volumeName: ""
+  # CSI configuration (if using CSI driver)
+  csi: {}
+    # driver: ebs.csi.aws.com
+    # volumeHandle: vol-xxx
+    # fsType: ext4
+
+# Resource requests and limits
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+# Autoscaling configuration
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+# Node selector
+nodeSelector: {}
+
+# Tolerations
+tolerations: []
+
+# Affinity
+affinity: {}
+
+# Probe configuration
+probes:
+  # Enable probes
+  enabled: false
+  # Liveness probe
+  liveness:
+    httpGet:
+      path: /health
+      port: http
+    initialDelaySeconds: 30
+    periodSeconds: 10
+  # Readiness probe
+  readiness:
+    httpGet:
+      path: /ready
+      port: http
+    initialDelaySeconds: 30
+    periodSeconds: 10
+
+# Regular environment variables (stored in a ConfigMap)
+env: {}
+
+# Secret environment variables (stored in a Secret)
+secrets: {}
+  # DB_USERNAME: admin
+  # DB_PASSWORD: password123
+  # API_KEY: your-api-key
+  # SECRET_TOKEN: your-secret-token
+
+# For referencing existing ConfigMaps and Secrets
+externalEnv: []
+  # - type: configMap
+  #   name: existing-config
+  # - type: secret
+  #   name: existing-secret
+
+# Additional volumes
+volumes: []
+  # - name: config-volume
+  #   configMap:
+  #     name: app-config
+
+# Additional volume mounts
+volumeMounts: []
+  # - name: config-volume
+  #   mountPath: /etc/config
+
+# Istio Integration Configuration
+istio:
+  # Enable Istio VirtualService
+  enabled: false
+  # Gateway configuration
+  gateway:
+    name: "namespace/gateway-name"  # Format: namespace/gateway-name
+  # Host configuration (default: "*" for all hosts)
+  hosts: "*"
+  # URI prefix for matching requests
+  uriPrefix: "/app-name/"
+  # Rewrite configuration
+  rewrite:
+    # Enable URI rewriting
+    enabled: true
+    # Target URI after rewrite
+    uri: "/"
+  # Request timeout
+  timeout: "300s"

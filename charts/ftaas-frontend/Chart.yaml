@@ -1,0 +1,33 @@
+apiVersion: v2
+# The name of your application
+name: ftaas-frontend
+# A brief description of your application
+description: A Helm chart for deploying finetuning-frontend component to Kubernetes
+
+# Chart type: application or library
+# - application: deployable application charts
+# - library: common utility functions/templates
+type: application
+
+# Chart version (follows Semantic Versioning)
+# Increment this when you modify the chart structure/templates
+version: 0.1.0
+
+# Application version
+# This is the version of your actual application
+appVersion: "0.1.0"
+
+# Keywords describing your application
+keywords:
+  - ftaas-frontend
+
+# Home page of your application
+home: https://github.com/nstarx-org/FineTuning-as-a-service
+
+# Chart maintainers
+maintainers:
+  - name: SaiShiva G
+    email: saishiva.gudla@nstarxinc.com
+
+# Icon for your application (optional)
+# icon: https://your-icon-url.svg
