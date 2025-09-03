@@ -65,16 +65,32 @@ spec:
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- if .Values.persistence.enabled }}
+          {{- if or .Values.fileConfigs .Values.persistence.enabled }}
           volumeMounts:
+            {{- if .Values.fileConfigs }}
+            {{- range $filename, $opts := .Values.fileMounts }}
+            - name: app-config
+              mountPath: {{ $opts.mountPath }}
+              subPath: {{ $opts.subPath }}
+            {{- end }}
+            {{- end }}
+            {{- if .Values.persistence.enabled }}
             - mountPath: {{ .Values.persistence.mountPath }}
               name: {{ .Values.persistence.name }}
+            {{- end }}
           {{- end }}
-      {{- if .Values.persistence.enabled }}
+      {{- if or .Values.fileConfigs .Values.persistence.enabled }}
       volumes:
+        {{- if .Values.fileConfigs }}
+        - name: app-config
+          configMap:
+            name: {{ include "app.configMapName" . }}
+        {{- end }}
+        {{- if .Values.persistence.enabled }}
         - name: {{ .Values.persistence.name }}
           persistentVolumeClaim:
             claimName: {{ include "app.pvcName" . }}
+        {{- end }}
       {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:

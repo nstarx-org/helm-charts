@@ -5,6 +5,17 @@ metadata:
   labels:
     {{- include "app.labels" . | nindent 4 }}
 data:
+  {{- if .Values.env }}
+  # Environment-style key/value pairs
   {{- range $key, $value := .Values.env }}
   {{ $key }}: {{ $value | quote }}
+  {{- end }}
+  {{- end }}
+
+  {{- if .Values.fileConfigs }}
+  # File-style configs
+  {{- range $filename, $content := .Values.fileConfigs }}
+  {{ $filename }}: |
+{{ $content | indent 4 }}
+  {{- end }}
   {{- end }}
