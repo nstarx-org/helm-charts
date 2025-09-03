@@ -155,11 +155,6 @@ probes:
 # Regular environment variables (stored in a ConfigMap)
 env: {}
 
-backend:
-  path: /api/
-  host: backend-service.backend-namespace.svc.cluster.local
-  port: 8000
-
 fileConfigs:
   nginx.conf: |
     server {
@@ -175,8 +170,8 @@ fileConfigs:
         }
 
         # Backend route (dynamic from values.yaml)
-        location {{ .Values.backend.path }} {
-            proxy_pass http://{{ .Values.backend.host }}:{{ .Values.backend.port }}/;
+        location /api/ {
+            proxy_pass http://backend:8000/;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection 'upgrade';
