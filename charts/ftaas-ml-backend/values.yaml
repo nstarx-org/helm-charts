@@ -155,6 +155,9 @@ probes:
 # Regular environment variables (stored in a ConfigMap)
 env: {}
 
+fileConfigs: {}
+fileMounts: {}
+
 # Secret environment variables (stored in a Secret)
 secrets: {}
   # DB_USERNAME: admin
