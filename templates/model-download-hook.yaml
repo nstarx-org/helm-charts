@@ -41,7 +41,8 @@ spec:
             
             {{- range .Values.modelDownload.models }}
             MODEL_NAME="{{ .name }}"
-            MODEL_PATH="/data/base_models/{{ .name | replace "/" "_" }}"
+            MODEL_DIR_NAME="{{ .name | splitList "/" | last }}"
+            MODEL_PATH="/data/base_models/$MODEL_DIR_NAME"
             
             echo "Checking if model $MODEL_NAME exists at $MODEL_PATH..."
             if [ -d "$MODEL_PATH" ] && [ "$(ls -A $MODEL_PATH)" ]; then
