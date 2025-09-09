@@ -51,7 +51,7 @@ spec:
               echo "Downloading model $MODEL_NAME to $MODEL_PATH..."
               mkdir -p "$MODEL_PATH"
               # huggingface-cli download "$MODEL_NAME" --local-dir "$MODEL_PATH" --local-dir-use-symlinks False
-              hf download "MODEL_NAME" --local-dir "$MODEL_PATH"
+              hf download "$MODEL_NAME" --local-dir "$MODEL_PATH"
               echo "Successfully downloaded model $MODEL_NAME"
             fi
             {{- end }}
