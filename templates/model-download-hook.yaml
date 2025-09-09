@@ -29,6 +29,11 @@ spec:
       - name: model-downloader
         image: "{{ .Values.modelDownload.image.repository }}:{{ .Values.modelDownload.image.tag }}"
         imagePullPolicy: {{ .Values.modelDownload.image.pullPolicy | default "IfNotPresent" }}
+        envFrom:
+          {{- if .Values.secrets }}
+          - secretRef:
+              name: {{ include "app.secretName" . }}
+          {{- end }}
         command: ["/bin/bash"]
         args:
           - -c
@@ -38,6 +43,12 @@ spec:
             
             # Install huggingface-hub if not present
             pip install huggingface-hub
+            
+            # Login with token (set as environment variable or secret)
+            if [ -n "$hf_token" ]; then
+                echo "Authenticating with Hugging Face..."
+                huggingface-cli login --token "$hf_token"
+            fi
             
             {{- range .Values.modelDownload.models }}
             MODEL_NAME="{{ .name }}"
