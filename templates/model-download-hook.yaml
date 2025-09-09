@@ -1,0 +1,71 @@
+{{- if and .Values.modelDownload .Values.modelDownload.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "app.fullname" . }}-model-download
+  labels:
+    {{- include "app.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "1"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  template:
+    metadata:
+      name: {{ include "app.fullname" . }}-model-download
+      labels:
+        {{- include "app.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      restartPolicy: OnFailure
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+      - name: model-downloader
+        image: "{{ .Values.modelDownload.image.repository }}:{{ .Values.modelDownload.image.tag }}"
+        imagePullPolicy: {{ .Values.modelDownload.image.pullPolicy | default "IfNotPresent" }}
+        command: ["/bin/bash"]
+        args:
+          - -c
+          - |
+            set -e
+            echo "Starting model download process..."
+            
+            # Install huggingface-hub if not present
+            pip install huggingface-hub
+            
+            {{- range .Values.modelDownload.models }}
+            MODEL_NAME="{{ .name }}"
+            MODEL_PATH="/data/base_models/{{ .name | replace "/" "_" }}"
+            
+            echo "Checking if model $MODEL_NAME exists at $MODEL_PATH..."
+            if [ -d "$MODEL_PATH" ] && [ "$(ls -A $MODEL_PATH)" ]; then
+              echo "Model $MODEL_NAME already exists, skipping download..."
+            else
+              echo "Downloading model $MODEL_NAME to $MODEL_PATH..."
+              mkdir -p "$MODEL_PATH"
+              huggingface-cli download "$MODEL_NAME" --local-dir "$MODEL_PATH" --local-dir-use-symlinks False
+              echo "Successfully downloaded model $MODEL_NAME"
+            fi
+            {{- end }}
+            
+            echo "Model download process completed!"
+        volumeMounts:
+        {{- if .Values.persistence.enabled }}
+        - name: {{ .Values.persistence.name }}
+          mountPath: {{ .Values.persistence.mountPath }}
+        {{- end }}
+        resources:
+          {{- toYaml .Values.modelDownload.resources | nindent 10 }}
+      volumes:
+      {{- if .Values.persistence.enabled }}
+      - name: {{ .Values.persistence.name }}
+        persistentVolumeClaim:
+          claimName: {{ include "app.pvcName" . }}
+      {{- end }}
+{{- end }}

@@ -202,3 +202,26 @@ istio:
     uri: "/"
   # Request timeout
   timeout: "300s"
+
+# Model Download Hook Configuration
+modelDownload:
+  # Enable model download post-install hook
+  enabled: false
+  # Container image for downloading models
+  image:
+    repository: python
+    tag: "3.11-slim"
+    pullPolicy: IfNotPresent
+  # Resource limits for the download job
+  resources:
+    requests:
+      cpu: 100m
+      memory: 512Mi
+    limits:
+      cpu: 1000m
+      memory: 2Gi
+  # List of models to download
+  models:
+    - name: "microsoft/Phi-3-mini-4k-instruct"
+    # - name: "microsoft/DialoGPT-medium"
+    # - name: "facebook/opt-350m"
