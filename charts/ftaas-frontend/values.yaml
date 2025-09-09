@@ -179,6 +179,8 @@ fileConfigs:
             proxy_cache_bypass $http_upgrade;
         }
 
+        # Add more routes if needed
+
         error_page 404 /index.html;
 
         location = /50x.html {
