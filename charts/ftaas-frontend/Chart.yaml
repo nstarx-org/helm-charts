@@ -11,7 +11,7 @@ type: application
 
 # Chart version (follows Semantic Versioning)
 # Increment this when you modify the chart structure/templates
-version: 0.1.1
+version: 0.1.0
 
 # Application version
 # This is the version of your actual application
