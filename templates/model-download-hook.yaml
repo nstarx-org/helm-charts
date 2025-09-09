@@ -47,7 +47,8 @@ spec:
             # Login with token (set as environment variable or secret)
             if [ -n "$hf_token" ]; then
                 echo "Authenticating with Hugging Face..."
-                huggingface-cli login --token "$hf_token"
+                # huggingface-cli login --token "$hf_token"
+                hf auth login --token "$hf_token"
             fi
             
             {{- range .Values.modelDownload.models }}
