@@ -93,6 +93,22 @@ entries:
   ftaas-ml-backend:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2025-09-09T10:18:30.496721018Z"
+    description: A Helm chart for deploying finetuning-ml-backend component to Kubernetes
+    digest: 5fc5c3cdf37f74866b91237c47fa8bfedcc451d97e48c8d9c98b51444dda94bb
+    home: https://github.com/nstarx-org/FineTuning-as-a-service
+    keywords:
+    - ftaas-ml-backend
+    maintainers:
+    - email: saishiva.gudla@nstarxinc.com
+      name: SaiShiva G
+    name: ftaas-ml-backend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/ftaas-ml-backend-0.1.4/ftaas-ml-backend-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2025-09-09T10:07:57.956098049Z"
     description: A Helm chart for deploying finetuning-ml-backend component to Kubernetes
     digest: 9886786c29ef8f794090b2a1f3f91b05e5e8285f6eb39d5663258fe56f7a531e
@@ -292,4 +308,4 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-tts-0.1.0/genai-hub-tts-0.1.0.tgz
     version: 0.1.0
-generated: "2025-09-09T10:07:57.956141663Z"
+generated: "2025-09-09T10:18:30.496745244Z"
