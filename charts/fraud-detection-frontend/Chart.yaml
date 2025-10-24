@@ -1,0 +1,33 @@
+apiVersion: v2
+# The name of your application
+name: fraud-detection-frontend
+# A brief description of your application
+description: A Helm chart for deploying fraud-detection-frontend component to Kubernetes
+
+# Chart type: application or library
+# - application: deployable application charts
+# - library: common utility functions/templates
+type: application
+
+# Chart version (follows Semantic Versioning)
+# Increment this when you modify the chart structure/templates
+version: 0.1.0
+
+# Application version
+# This is the version of your actual application
+appVersion: "0.1.0"
+
+# Keywords describing your application
+keywords:
+  - fraud-detection-frontend
+
+# Home page of your application
+home: https://github.com/nstarx-org/FraudDetection-SHI
+
+# Chart maintainers
+maintainers:
+  - name: Anand Kumar
+    email: anand.kontham@nstarxinc.com
+
+# Icon for your application (optional)
+# icon: https://your-icon-url.svg
