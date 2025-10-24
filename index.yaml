@@ -17,6 +17,23 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/ftaas-frontend-0.1.0/ftaas-frontend-0.1.0.tgz
     version: 0.1.0
+  ftaas-middleware:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:16.75456855Z"
+    description: A Helm chart for deploying finetuning-middleware component to Kubernetes
+    digest: 8d78603bc465a944d228ae32fe8a8c4b3b531541b69e7aeac640c375b7822dea
+    home: https://github.com/nstarx-org/FineTuning-as-a-service
+    keywords:
+    - ftaas-middleware
+    maintainers:
+    - email: saishiva.gudla@nstarxinc.com
+      name: SaiShiva G
+    name: ftaas-middleware
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/ftaas-middleware-0.1.0/ftaas-middleware-0.1.0.tgz
+    version: 0.1.0
   ftaas-ml-backend:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -34,4 +51,141 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/ftaas-ml-backend-0.1.0/ftaas-ml-backend-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-24T06:07:33.952695432Z"
+  genai-hub-blueprint-ai:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:17.147829656Z"
+    description: A Helm chart for deploying blueprint ai usecase for the genai-hub
+    digest: 55ec8ca1d4e152ef86605cde9820e8192639653ccf37c90116480816d72da522
+    home: https://github.com/nstarx-org/ML-Service-BlueprintAI
+    keywords:
+    - blueprint-ai
+    name: genai-hub-blueprint-ai
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-blueprint-ai-0.1.0/genai-hub-blueprint-ai-0.1.0.tgz
+    version: 0.1.0
+  genai-hub-event-planner:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:17.301237127Z"
+    description: A Helm chart for deploying event planner usecase for the genai-hub
+    digest: 19b3b131e73d6917c3b94530f9ad078764c9d12bfd0b1d6bc9425646a48259c1
+    home: https://github.com/nstarx-org/Eventplanner
+    keywords:
+    - event-planner
+    name: genai-hub-event-planner
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-event-planner-0.1.0/genai-hub-event-planner-0.1.0.tgz
+    version: 0.1.0
+  genai-hub-frontend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:17.506720275Z"
+    description: A Helm chart for deploying frontend for the genai-hub
+    digest: f70ebd647c5a17b2a56eca2d19b72f403af12f02775c81610b27600c42002625
+    keywords:
+    - frontend
+    name: genai-hub-frontend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-frontend-0.1.0/genai-hub-frontend-0.1.0.tgz
+    version: 0.1.0
+  genai-hub-middleware:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:17.707551544Z"
+    description: A Helm chart for deploying middleware usecase for the genai-hub
+    digest: e6e93fed91cde9d39c773aa8154ab430dccbf9b8df6e141e29eb4ec3deff2074
+    keywords:
+    - middleware
+    name: genai-hub-middleware
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-middleware-0.1.0/genai-hub-middleware-0.1.0.tgz
+    version: 0.1.0
+  genai-hub-mmchatbot:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:17.891027709Z"
+    description: A Helm chart for deploying mmchatbot usecase for the genai-hub
+    digest: c6884ed9f3edbcc7841cca72eb7a43714e76c2f97d5768b92de9f808a37bec3f
+    home: https://github.com/nstarx-org/MultiModelChatbot
+    keywords:
+    - mmchatbot
+    name: genai-hub-mmchatbot
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-mmchatbot-0.1.0/genai-hub-mmchatbot-0.1.0.tgz
+    version: 0.1.0
+  genai-hub-rag:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:18.105637184Z"
+    description: A Helm chart for deploying rag usecase for the genai-hub
+    digest: 3027861e6cb79454f3f9a1750ec4c35e32ced361796b817cc47219780dbf3cce
+    home: https://github.com/nstarx-org/SHI_RAG
+    keywords:
+    - rag
+    name: genai-hub-rag
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-rag-0.1.0/genai-hub-rag-0.1.0.tgz
+    version: 0.1.0
+  genai-hub-report-generator:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:18.312037605Z"
+    description: A Helm chart for deploying report generator usecase for the genai-hub
+    digest: 61b20b6e3a63bd7286f74d4518143cbcfd22089fca9a3248e0310620b485a3cc
+    home: https://github.com/nstarx-org/report_generator
+    keywords:
+    - report-generator
+    name: genai-hub-report-generator
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-report-generator-0.1.0/genai-hub-report-generator-0.1.0.tgz
+    version: 0.1.0
+  genai-hub-stt:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:18.501898274Z"
+    description: A Helm chart for deploying stt usecase for the genai-hub
+    digest: 500e652497e487d6d661c0290d7fa1e2052eddb3be1821452282aa07c497d60a
+    home: https://github.com/nstarx-org/speechtotext
+    keywords:
+    - stt
+    name: genai-hub-stt
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-stt-0.1.0/genai-hub-stt-0.1.0.tgz
+    version: 0.1.0
+  genai-hub-tts:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:18.689804149Z"
+    description: A Helm chart for deploying tts usecase for the genai-hub
+    digest: 0540c35895e8eac22b84512f3ff26f2f4d860ae80a5e1abad678527ea776a7fc
+    home: https://github.com/nstarx-org/texttospeech_with_env_variables
+    keywords:
+    - tts
+    name: genai-hub-tts
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-tts-0.1.0/genai-hub-tts-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-frontend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:29:18.873248576Z"
+    description: A Helm chart for deploying frontend for the gen-ai-lab
+    digest: a154bcf2023f7c19cacc84ede5ba95c9131aa03bd00ac609ad061ca56a85d29d
+    keywords:
+    - frontend
+    name: genai-lab-frontend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-frontend-0.1.0/genai-lab-frontend-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-10-24T06:29:18.87325616Z"
