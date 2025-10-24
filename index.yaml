@@ -1,3 +1,37 @@
 apiVersion: v1
-entries: {}
-generated: "2025-09-09T10:41:23.56160778Z"
+entries:
+  ftaas-frontend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:07:33.835825194Z"
+    description: A Helm chart for deploying finetuning-frontend component to Kubernetes
+    digest: aa49c674e61a6f5bfb47a283dff6724d7ef379f77bc229a03eec60e6c4374655
+    home: https://github.com/nstarx-org/FineTuning-as-a-service
+    keywords:
+    - ftaas-frontend
+    maintainers:
+    - email: saishiva.gudla@nstarxinc.com
+      name: SaiShiva G
+    name: ftaas-frontend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/ftaas-frontend-0.1.0/ftaas-frontend-0.1.0.tgz
+    version: 0.1.0
+  ftaas-ml-backend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T06:07:33.952690162Z"
+    description: A Helm chart for deploying finetuning-ml-backend component to Kubernetes
+    digest: 3389c9cd6dd0117b3af83ac56b30dea1aec75f397a78ef832dd4545a51f7e953
+    home: https://github.com/nstarx-org/FineTuning-as-a-service
+    keywords:
+    - ftaas-ml-backend
+    maintainers:
+    - email: saishiva.gudla@nstarxinc.com
+      name: SaiShiva G
+    name: ftaas-ml-backend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/ftaas-ml-backend-0.1.0/ftaas-ml-backend-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-10-24T06:07:33.952695432Z"
