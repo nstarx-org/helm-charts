@@ -1,6 +1,6 @@
 apiVersion: v2
 # The name of your application
-name: genai-frontend
+name: genai-lab-frontend
 # A brief description of your application
 description: A Helm chart for deploying frontend for the gen-ai-lab
 
