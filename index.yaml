@@ -1,5 +1,40 @@
 apiVersion: v1
 entries:
+  fraud-detection-backend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T09:39:59.914693273Z"
+    description: A Helm chart for deploying fraud-detection-backend component to Kubernetes
+    digest: d5468a81bc53fcce328daabd370ecd2b7c7d017e11913943763694ccae728f19
+    home: https://github.com/nstarx-org/FraudDetection-SHI
+    keywords:
+    - fraud-detection-backend
+    maintainers:
+    - email: anand.kontham@nstarxinc.com
+      name: Anand Kumar
+    name: fraud-detection-backend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/fraud-detection-backend-0.1.0/fraud-detection-backend-0.1.0.tgz
+    version: 0.1.0
+  fraud-detection-frontend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-24T09:40:00.063314627Z"
+    description: A Helm chart for deploying fraud-detection-frontend component to
+      Kubernetes
+    digest: a5ddeac7fe350397b215261bfa661fd4f1296fe44cad7dc2c833dfbe89aa2c60
+    home: https://github.com/nstarx-org/FraudDetection-SHI
+    keywords:
+    - fraud-detection-frontend
+    maintainers:
+    - email: anand.kontham@nstarxinc.com
+      name: Anand Kumar
+    name: fraud-detection-frontend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/fraud-detection-frontend-0.1.0/fraud-detection-frontend-0.1.0.tgz
+    version: 0.1.0
   ftaas-frontend:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -188,4 +223,4 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-frontend-0.1.0/genai-lab-frontend-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-24T06:29:18.87325616Z"
+generated: "2025-10-24T09:40:00.063323493Z"
