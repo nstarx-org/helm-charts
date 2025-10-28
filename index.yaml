@@ -210,6 +210,32 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-tts-0.1.0/genai-hub-tts-0.1.0.tgz
     version: 0.1.0
+  genai-lab-backend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:43.197973566Z"
+    description: A Helm chart for deploying backend for the gen-ai-lab
+    digest: 1640b7cd67de64c78876b99bddc7b8163229f61836b3225035511bf8197f73a4
+    keywords:
+    - backend
+    name: genai-lab-backend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-backend-0.1.0/genai-lab-backend-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-event-planner:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:43.388410983Z"
+    description: A Helm chart for deploying event planner for the gen-ai-lab
+    digest: 8adf29dff0491fc2e0d0344c5656788a89136a09db61b72e6593553616407a5f
+    keywords:
+    - event-planner
+    name: genai-lab-event-planner
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-event-planner-0.1.0/genai-lab-event-planner-0.1.0.tgz
+    version: 0.1.0
   genai-lab-frontend:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -223,4 +249,134 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-frontend-0.1.0/genai-lab-frontend-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-24T09:40:00.063323493Z"
+  genai-lab-mmchat-build-your-own:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:43.589735501Z"
+    description: A Helm chart for deploying mmchat-build-your-own for the gen-ai-lab
+    digest: 90d1c6064b5e60fc9ef30d2e9f353d155c635af9c9e080318f4cb9e173e76b22
+    keywords:
+    - mmchat-build-your-own
+    name: genai-lab-mmchat-build-your-own
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-mmchat-build-your-own-0.1.0/genai-lab-mmchat-build-your-own-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-mmchat-try-it-now:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:43.880068472Z"
+    description: A Helm chart for deploying mmchat-try-it-now for the gen-ai-lab
+    digest: 7fa318fd31918a58dff9f7fad780a703f3a4c2c97c6d066376757fbece4602e4
+    keywords:
+    - mmchat-try-it-now
+    name: genai-lab-mmchat-try-it-now
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-mmchat-try-it-now-0.1.0/genai-lab-mmchat-try-it-now-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-nvidia-python-client:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:44.072078491Z"
+    description: A Helm chart for deploying nvidia-python-client for the gen-ai-lab
+    digest: a416c1e392ab072d44dc5609c6595a79a4f4ec62ca1c108475ad66f20359cf95
+    keywords:
+    - nvidia-python-client
+    name: genai-lab-nvidia-python-client
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-nvidia-python-client-0.1.0/genai-lab-nvidia-python-client-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-rag-build-your-own:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:44.290828233Z"
+    description: A Helm chart for deploying rag-build-your-own for the gen-ai-lab
+    digest: 64b2960e9098e6e661ef8b3d6dfc0f8b68e3175c27490a2417067bb84533aad0
+    keywords:
+    - rag-build-your-own
+    name: genai-lab-rag-build-your-own
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-rag-build-your-own-0.1.0/genai-lab-rag-build-your-own-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-rag-try-it-now:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:44.582945999Z"
+    description: A Helm chart for deploying rag-try-it-now for the gen-ai-lab
+    digest: ad455db07e81a8769f12a0b31406374d7403220de25275587f35367abe1c306b
+    keywords:
+    - rag-try-it-now
+    name: genai-lab-rag-try-it-now
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-rag-try-it-now-0.1.0/genai-lab-rag-try-it-now-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-report-generator:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:44.818398106Z"
+    description: A Helm chart for deploying report-generator for the gen-ai-lab
+    digest: c002965bbab007e1b176e0aef09a8f6d256f836bf097c7b72295b8447b0796e7
+    keywords:
+    - report-generator
+    name: genai-lab-report-generator
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-report-generator-0.1.0/genai-lab-report-generator-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-stt-build-your-own:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:45.016239772Z"
+    description: A Helm chart for deploying stt-build-your-own for the gen-ai-lab
+    digest: 6e08187f0f17fa499ebc5944bc4eb43c24962c18bf165b49becf1bc7bb3613bb
+    keywords:
+    - stt-build-your-own
+    name: genai-lab-stt-build-your-own
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-stt-build-your-own-0.1.0/genai-lab-stt-build-your-own-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-text-embeddings-inference:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:45.237123563Z"
+    description: A Helm chart for deploying text-embeddings-inference for the gen-ai-lab
+    digest: 3cadb3f7052e5e7d4f5fba82778c0402647bc959c76464087abd2a2e4d7e1b44
+    keywords:
+    - text-embeddings-inference
+    name: genai-lab-text-embeddings-inference
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-text-embeddings-inference-0.1.0/genai-lab-text-embeddings-inference-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-tts-build-your-own:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:45.437996608Z"
+    description: A Helm chart for deploying tts-build-your-own for the gen-ai-lab
+    digest: d8c630fcb2c6b61349ef7c5472a8b9aba997b7811b3de862ef30ddb439b7e4b1
+    keywords:
+    - tts-build-your-own
+    name: genai-lab-tts-build-your-own
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-tts-build-your-own-0.1.0/genai-lab-tts-build-your-own-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-tts-try-it-now:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-10-28T09:56:45.675523524Z"
+    description: A Helm chart for deploying tts-try-it-now for the gen-ai-lab
+    digest: d86ed93efebe1e0ba601c608bf4f4860070a51e398121f550d15b198589bb3a3
+    keywords:
+    - tts-try-it-now
+    name: genai-lab-tts-try-it-now
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-tts-try-it-now-0.1.0/genai-lab-tts-try-it-now-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-10-28T09:56:45.675541928Z"
