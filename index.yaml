@@ -210,6 +210,81 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-hub-tts-0.1.0/genai-hub-tts-0.1.0.tgz
     version: 0.1.0
+  genai-lab-3-interaction-layer:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-04-01T18:42:08.44344899Z"
+    description: A Helm chart for deploying the genai-lab-3-interaction-layer application.
+    digest: 83f2aa5386bb4f2067d1d09e6d210212976860e67d9d228a062deed63fb13291
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - interaction layer
+    - genai lab-3
+    name: genai-lab-3-interaction-layer
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-interaction-layer-0.1.0/genai-lab-3-interaction-layer-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-3-rag-backend-api:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-04-01T18:42:08.59656571Z"
+    description: A Helm chart for deploying the genai-lab-3-rag-backend-api application.
+    digest: c0496adc11fb5ebc252376a705ea3a24230ba3e29781b2a5ce9dc33c7f196fb1
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - rag backend api
+    - genai lab-3
+    name: genai-lab-3-rag-backend-api
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-rag-backend-api-0.1.0/genai-lab-3-rag-backend-api-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-3-rag-frontend-ui:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-04-01T18:42:08.752492041Z"
+    description: A Helm chart for deploying the genai-lab-3-rag-frontend-ui application.
+    digest: 0357ece367e45327217e21c6e6653c66513463d3e863df63bd3aeaed4e7fd994
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - rag frontend ui
+    - genai lab-3
+    name: genai-lab-3-rag-frontend-ui
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-rag-frontend-ui-0.1.0/genai-lab-3-rag-frontend-ui-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-3-rag-ml-backend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-04-01T18:42:08.940245054Z"
+    description: A Helm chart for deploying the genai-lab-3-rag-ml-backend application.
+    digest: d8e3b48666225bd56fab4873210d9074d4284383a0d7cd0ae5758e707e7a3bd4
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - rag ml backend
+    - genai lab-3
+    name: genai-lab-3-rag-ml-backend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-rag-ml-backend-0.1.0/genai-lab-3-rag-ml-backend-0.1.0.tgz
+    version: 0.1.0
+  genai-lab-3-vectorstore-service:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-04-01T18:42:09.106455755Z"
+    description: A Helm chart for deploying the genai-lab-3-vectorstore-service application.
+    digest: 717e96ff2d1645cb99d074066c02349b108761923937e4902273e6d2de3565c0
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - vectorstore service
+    - genai lab-3
+    name: genai-lab-3-vectorstore-service
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-vectorstore-service-0.1.0/genai-lab-3-vectorstore-service-0.1.0.tgz
+    version: 0.1.0
   genai-lab-backend:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -379,4 +454,4 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-tts-try-it-now-0.1.0/genai-lab-tts-try-it-now-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-28T09:56:45.675541928Z"
+generated: "2026-04-01T18:42:09.10646583Z"
