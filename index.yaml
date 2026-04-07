@@ -212,6 +212,20 @@ entries:
     version: 0.1.0
   genai-lab-3-interaction-layer:
   - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2026-04-07T08:59:26.515963545Z"
+    description: A Helm chart for deploying the genai-lab-3-interaction-layer application.
+    digest: a9eaa2fcbfee1505d90189a4c9580b5ed800f4d7359ef850b1cdcf138a98aeaa
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - interaction layer
+    - genai lab-3
+    name: genai-lab-3-interaction-layer
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-interaction-layer-0.1.1/genai-lab-3-interaction-layer-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2026-04-01T18:42:08.44344899Z"
     description: A Helm chart for deploying the genai-lab-3-interaction-layer application.
@@ -496,4 +510,4 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-tts-try-it-now-0.1.0/genai-lab-tts-try-it-now-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-07T08:59:21.691448409Z"
+generated: "2026-04-07T08:59:26.51598748Z"
