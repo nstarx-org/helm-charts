@@ -256,6 +256,20 @@ entries:
     version: 0.1.0
   genai-lab-3-rag-frontend-ui:
   - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2026-04-07T08:59:21.691426468Z"
+    description: A Helm chart for deploying the genai-lab-3-rag-frontend-ui application.
+    digest: 8d51c51430168560f11362dc30b15d9038bb2c54f0d5d91bc4ceb46be32989ce
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - rag frontend ui
+    - genai lab-3
+    name: genai-lab-3-rag-frontend-ui
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-rag-frontend-ui-0.1.1/genai-lab-3-rag-frontend-ui-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2026-04-01T18:42:08.752492041Z"
     description: A Helm chart for deploying the genai-lab-3-rag-frontend-ui application.
@@ -482,4 +496,4 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-tts-try-it-now-0.1.0/genai-lab-tts-try-it-now-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-07T08:59:17.18217912Z"
+generated: "2026-04-07T08:59:21.691448409Z"
