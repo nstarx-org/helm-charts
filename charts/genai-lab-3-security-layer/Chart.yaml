@@ -1,8 +1,8 @@
 apiVersion: v2
 # The name of your application
-name: genai-lab-3-interaction-layer
+name: genai-lab-3-security-layer
 # A brief description of your application
-description: A Helm chart for deploying the genai-lab-3-interaction-layer application.
+description: A Helm chart for deploying the genai-lab-3-security-layer application.
 
 # Chart type: application or library
 # - application: deployable application charts
@@ -19,7 +19,7 @@ appVersion: "0.1.0"
 
 # Keywords describing your application
 keywords:
-  - interaction-layer
+  - security-layer
   - genai-lab-3
 
 # Home page of your application

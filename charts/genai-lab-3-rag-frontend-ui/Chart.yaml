@@ -19,8 +19,8 @@ appVersion: "0.1.0"
 
 # Keywords describing your application
 keywords:
-  - rag frontend ui
-  - genai lab-3
+  - rag-frontend-ui
+  - genai-lab-3
 
 # Home page of your application
 home: https://github.com/nstarx-org/GenAI-Lab-3
