@@ -326,7 +326,36 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-rag-ml-backend-0.1.0/genai-lab-3-rag-ml-backend-0.1.0.tgz
     version: 0.1.0
+  genai-lab-3-security-layer:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-04-13T05:59:57.483158933Z"
+    description: A Helm chart for deploying the genai-lab-3-security-layer application.
+    digest: ae0a7d40bcaf3a8cca7753f60cf0728b300f9ef9e40464599d2eb4b78710e145
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - security-layer
+    - genai-lab-3
+    name: genai-lab-3-security-layer
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-security-layer-0.1.0/genai-lab-3-security-layer-0.1.0.tgz
+    version: 0.1.0
   genai-lab-3-vectorstore-service:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2026-04-13T05:59:57.6335355Z"
+    description: A Helm chart for deploying the genai-lab-3-vectorstore-service application.
+    digest: ab797ff4504303decfe08307ee70a542d73ad30beee2a59b8ade0a3bafcaf7b6
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - vectorstore-service
+    - genai-lab-3
+    name: genai-lab-3-vectorstore-service
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-vectorstore-service-0.1.1/genai-lab-3-vectorstore-service-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.0
     created: "2026-04-01T18:42:09.106455755Z"
@@ -510,4 +539,4 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-tts-try-it-now-0.1.0/genai-lab-tts-try-it-now-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-07T08:59:26.51598748Z"
+generated: "2026-04-13T05:59:57.633599281Z"
