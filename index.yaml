@@ -326,6 +326,52 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-rag-ml-backend-0.1.0/genai-lab-3-rag-ml-backend-0.1.0.tgz
     version: 0.1.0
+  genai-lab-3-report-generator-api:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2026-04-24T10:09:53.771357029Z"
+    description: A Helm chart for deploying the genai-lab-3-report-generator-api application.
+    digest: 805eb54167663fbca30ca404776c2c982406c2bf9f25b65ec082dc6cb7db14b9
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - report-generator-api
+    - genai-lab-3
+    name: genai-lab-3-report-generator-api
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-report-generator-api-0.1.1/genai-lab-3-report-generator-api-0.1.1.tgz
+    version: 0.1.1
+  genai-lab-3-report-generator-ml-backend:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2026-04-24T10:09:53.916408279Z"
+    description: A Helm chart for deploying the genai-lab-3-report-generator-ml-backend
+      application.
+    digest: 62c43a5f1d91348bada2e5c706630f96724880682ac2e11f781297fde08b4c60
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - report-generator-ml-backend
+    - genai-lab-3
+    name: genai-lab-3-report-generator-ml-backend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-report-generator-ml-backend-0.1.1/genai-lab-3-report-generator-ml-backend-0.1.1.tgz
+    version: 0.1.1
+  genai-lab-3-report-generator-ui:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2026-04-24T10:09:54.054097813Z"
+    description: A Helm chart for deploying the genai-lab-3-report-generator-ui application.
+    digest: d69aeae4a58865d5fe8de12911e4b5ad519d937187211bda17788d20a42dbc5c
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - report-generator-ui
+    - genai-lab-3
+    name: genai-lab-3-report-generator-ui
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-report-generator-ui-0.1.1/genai-lab-3-report-generator-ui-0.1.1.tgz
+    version: 0.1.1
   genai-lab-3-security-layer:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -539,4 +585,4 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-tts-try-it-now-0.1.0/genai-lab-tts-try-it-now-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-13T05:59:57.633599281Z"
+generated: "2026-04-24T10:09:54.054124041Z"
