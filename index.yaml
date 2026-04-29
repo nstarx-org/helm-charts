@@ -239,6 +239,51 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-interaction-layer-0.1.0/genai-lab-3-interaction-layer-0.1.0.tgz
     version: 0.1.0
+  genai-lab-3-mmchat-backend-api:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2026-04-29T09:37:45.199544501Z"
+    description: A Helm chart for deploying the genai-lab-3-mmchat-backend-api application.
+    digest: 5abfb901df23f85ce3015e6d7d8fcb248d4e446196e2cb502e1e9fa4b1c79e66
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - mmchat-backend-api
+    - genai-lab-3
+    name: genai-lab-3-mmchat-backend-api
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-mmchat-backend-api-0.1.1/genai-lab-3-mmchat-backend-api-0.1.1.tgz
+    version: 0.1.1
+  genai-lab-3-mmchat-frontend-ui:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2026-04-29T09:37:45.402365239Z"
+    description: A Helm chart for deploying the genai-lab-3-mmchat-frontend-ui application.
+    digest: 1af4358af53d255cdba5d9fcf3bf4231f4c9a5b1806680cc59ed531d43502d22
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - mmchat-frontend-ui
+    - genai-lab-3
+    name: genai-lab-3-mmchat-frontend-ui
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-mmchat-frontend-ui-0.1.1/genai-lab-3-mmchat-frontend-ui-0.1.1.tgz
+    version: 0.1.1
+  genai-lab-3-mmchat-ml-backend:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2026-04-29T09:37:45.594092844Z"
+    description: A Helm chart for deploying the genai-lab-3-mmchat-ml-backend application.
+    digest: aacc686729a6db7ff7585afb1495bbc6695b4dc3290284dad7c6d5757b1aae70
+    home: https://github.com/nstarx-org/GenAI-Lab-3
+    keywords:
+    - mmchat-ml-backend
+    - genai-lab-3
+    name: genai-lab-3-mmchat-ml-backend
+    type: application
+    urls:
+    - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-3-mmchat-ml-backend-0.1.1/genai-lab-3-mmchat-ml-backend-0.1.1.tgz
+    version: 0.1.1
   genai-lab-3-rag-backend-api:
   - apiVersion: v2
     appVersion: 0.1.1
@@ -585,4 +630,4 @@ entries:
     urls:
     - https://github.com/nstarx-org/helm-charts/releases/download/genai-lab-tts-try-it-now-0.1.0/genai-lab-tts-try-it-now-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-24T10:09:54.054124041Z"
+generated: "2026-04-29T09:37:45.594117309Z"
